@@ -20,7 +20,8 @@ branch="build-$ver"
 curbranch=`git branch | grep "*" | sed "s/* //"`
 timestamp=$(date)
 tokens="s/@@ver@@/$ver/g;s/\@@timestamp@@/$timestamp/g"
-remote="github"
+remote="origin"
+
 
 echo "Updating Version Identifiers"
 
