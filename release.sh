@@ -25,7 +25,7 @@ remote="origin"
 
 echo "Updating Version Identifiers"
 
-sed -E -e "s/\"version\": \"([0-9\.]+)\",/\"version\": \"$ver\",/g" -i "" component.json select2.jquery.json
+sed -E -e "s/\"version\": \"([0-9\.]+)\",/\"version\": \"$ver\",/g" -i"" component.json select2.jquery.json
 git add component.json
 git add select2.jquery.json
 git commit -m "modified version identifiers in descriptors for release $ver"
@@ -38,7 +38,7 @@ echo "Tokenizing..."
 
 find . -name "$js" | xargs -I{} sed -e "$tokens" -i "" {} 
 find . -name "$css" | xargs -I{} sed -e "$tokens" -i "" {}
-sed -e "s/latest/$ver/g" -i "" component.json
+sed -e "s/latest/$ver/g" -i"" component.json
 
 git add "$js"
 git add "$css"
